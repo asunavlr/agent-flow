@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////data/agentflow.db
+    volumes:
+      - agentflow_data:/data
+volumes:
+  agentflow_data:
